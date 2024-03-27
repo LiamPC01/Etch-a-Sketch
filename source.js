@@ -7,28 +7,45 @@ square.style.height = "32px";
 square.style.backgroundColor = "grey";
 square.classList.add("square");
 
-for (let i = 0; i < 256; i++) {
-    canvas.appendChild(square.cloneNode());
-}
+newCanvas(16);
 
-let squareArray = document.querySelectorAll(".square");
-squareArray.forEach(function (elem) {
-    let elemColor = elem.style.backgroundColor;
-    elem.addEventListener("mouseover", function(){
-        elem.style.backgroundColor = "black";
-        console.log("over");
-    });
-    elem.addEventListener("mouseout", function(){
-        elem.style.backgroundColor = elemColor;
-        console.log("out");
-    });
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", function () {
+    let gridWidth = prompt("What width would you like your canvas to be? Must be lower than 100");
+
+    if (gridWidth <= 100)
+    {
+        newCanvas(gridWidth);
+    }
+    else
+    {
+        alert("Number too high, must be 100 or lower");
+    }
+    
+    
 })
 
+function newCanvas(gridWidth) {
+    canvas.innerHTML = ""; // clears canvas
+    let gridSize = gridWidth*gridWidth;
+    let squareSize = document.getElementById("canvas").offsetWidth / gridWidth;
+    console.log(squareSize);
+    square.style.width = squareSize + "px";
+    square.style.height = squareSize + "px";
 
-function onHover(elem) {
-    // console.log("onHover");
-    // console.log(elem);
-    // elem.classList.add("hover");
+    for (let i = 0; i < gridSize; i++) {
+        canvas.appendChild(square.cloneNode());
+    }
+
+    let squareArray = document.querySelectorAll(".square");
+    squareArray.forEach(function (elem) {
+        elem.addEventListener("mouseover", function () {
+            elem.style.backgroundColor = "black";
+        });
+
+    })
+
 }
 
 

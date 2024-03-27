@@ -10,14 +10,19 @@
 }
 
 #canvas {
-    border: solid rgb(33,25,24) 32px;
+    /* border: solid rgb(33,25,24) 32px; */
     width: 512px;
     height: 512px;
     display: flex;
     flex-wrap: wrap;
     
+    
 }
 
 .hover{
     background-color: black;
+}
+
+#btn {
+    
 }
