@@ -1,11 +1,12 @@
 #container {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    border: solid black 2px;
-    align-self: center;
+    /* border: solid black 2px; */
+    /* align-self: center; */
     min-height: 100vh;
     min-width: 100vw;
+    flex-direction: column;
 
 }
 
@@ -15,7 +16,7 @@
     height: 512px;
     display: flex;
     flex-wrap: wrap;
-    
+
     
 }
 
@@ -23,6 +24,75 @@
     background-color: black;
 }
 
-#btn {
+#paintPalette {
+    width: 800px;
+    height: 150px;
+    background-color: rgb(37, 35, 35);
+    margin: 75px;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#paintPalette > * {
+    border: solid white 0px;
+}
+
+.canvasBtn {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(37, 35, 35);
+    color: white;
+    padding: 15px;
+    border: solid grey 2px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+body {
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+
+#main {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    /* border:solid red 2px; */
     
 }
+
+#red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+#blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+#black {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+#white {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+

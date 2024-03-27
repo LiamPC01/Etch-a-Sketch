@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet", href="style.css">
+    <link rel="stylesheet" , href="style.css">
 </head>
+
 <body>
-    
+    <h1>Etch-a-Sketch</h1>
     <div id="container">
-        <button id="btn">NEW CANVAS</button>
-        <div id="canvas"></div>
+        <div id="main">
+            <button id="btn" class="canvasBtn"><b>NEW CANVAS</b></button>
+            <div id="canvas"></div>
+            <button id="clearBtn" class="canvasBtn"><b>CLEAR CANVAS</b></button>
+        </div>
+
+        <div id="paintPalette">
+            <button id="red" class="colorBtn"></button>
+            <button id="green" class="colorBtn"></button>
+            <button id="blue" class="colorBtn"></button>
+            <button id="black" class="colorBtn"></button>
+            <button id="white" class="colorBtn"></button>
+        </div>
     </div>
-    
+
 </body>
 <script src="source.js"></script>
+
 </html>
