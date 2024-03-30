@@ -12,7 +12,15 @@
     <h1>Etch-a-Sketch</h1>
     <div id="container">
         <div id="main">
-            <button id="btn" class="canvasBtn"><b>NEW CANVAS</b></button>
+            <div id="newCanvas">
+                <button id="btn" class="canvasBtn"><b>NEW CANVAS</b></button>
+                <div id="sliderContainer">
+                    <input type="range" class="slider" id="canvasSlider" min="1" max="100" value="16" oninput="showVal(this.value)">
+                        <p id="sliderLabel"> 16 x 16</p>
+                </div>
+
+            </div>
+
             <div id="canvas"></div>
             <button id="clearBtn" class="canvasBtn"><b>CLEAR CANVAS</b></button>
         </div>

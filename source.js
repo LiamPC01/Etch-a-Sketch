@@ -1,46 +1,43 @@
 const canvas = document.querySelector("#canvas");
+const btn = document.querySelector("#btn");
 
 const square = document.createElement("div");
 square.style.width = "32px";
 square.style.height = "32px";
-// square.style.border = "solid black 1px";
 square.style.backgroundColor = "white";
 square.classList.add("square");
-
 let brushColor = "black";
-
-const btn = document.querySelector("#btn");
 
 let gridWidth = 16;
 newCanvas(gridWidth);
 
-btn.addEventListener("click", function () {
+let sliderValue = document.getElementById("canvasSlider").value;
 
-    gridWidth = prompt("What width would you like your canvas to be? Must be lower than 100");
-    if (!isNaN(gridWidth) && gridWidth <= 100)
-    {
-        newCanvas(gridWidth);
-    }
-    else
-    {
-        alert("Please Enter A Valid Number");
-    }
-    
-    
+function showVal(val) {
+    let valString = val + " x " + val;
+    document.getElementById("sliderLabel").textContent = valString;
+
+}
+
+
+
+btn.addEventListener("click", function () {
+    sliderValue = document.getElementById("canvasSlider").value;
+    newCanvas(sliderValue);
 })
 
 const clearBtn = document.querySelector("#clearBtn");
-clearBtn.addEventListener("click", function (){
+clearBtn.addEventListener("click", function () {
     canvas.innerHTML = "";
-    newCanvas(gridWidth);
+    newCanvas(sliderValue);
 
 })
 
 function newCanvas(gridWidth) {
     canvas.innerHTML = ""; // clears canvas
-    let gridSize = gridWidth*gridWidth;
+    let gridSize = gridWidth * gridWidth;
     let squareSize = document.getElementById("canvas").offsetWidth / gridWidth;
-    console.log(squareSize);
+    // console.log(squareSize);
     square.style.width = squareSize + "px";
     square.style.height = squareSize + "px";
 
@@ -59,20 +56,25 @@ function newCanvas(gridWidth) {
 
     let colorArray = document.querySelectorAll(".colorBtn");
 
-    colorArray.forEach(function(elem){
+    colorArray.forEach(function (elem) {
 
-        elem.addEventListener("click", function(){
+        elem.addEventListener("click", function () {
             let style = getComputedStyle(elem);
-            console.log(style["background-color"]);
+            // console.log(style["background-color"]);
             brushColor = style["background-color"];
         })
 
-        elem.addEventListener("mouseover", function(){
+        elem.addEventListener("mouseover", function () {
             elem.style.border = "solid rgb(15, 15, 15) 8px";
         })
-        elem.addEventListener("mouseout", function(){
+        elem.addEventListener("mouseout", function () {
             elem.style.border = "solid white 0px";
         })
+    })
+
+    const sliderLabel = document.getElementById("sliderLabel");
+    sliderLabel.addEventListener("oninput", function () {
+        alert("meow");
     })
 
 }

@@ -96,3 +96,34 @@ body {
     background-color: white;
 }
 
+#newCanvas {
+    display:flex;
+    flex-direction: column;
+}
+
+#sliderLabel {
+    display: flex;
+    align-items: center;
+}
+
+#sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid grey 2px;
+    width: max-content;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(37, 35, 35);
+    padding: 15px;
+}
+
+.slider {
+  -webkit-appearance: none; 
+  appearance: none;
+  background: rgb(70, 70, 70); /* Grey background */
+  border: solid grey 2px;
+  /* outline: none; Remove outline */
+  /* opacity: 0.7; Set transparency (for mouse-over effects on hover) */
+
+}
