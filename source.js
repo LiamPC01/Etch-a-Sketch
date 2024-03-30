@@ -72,10 +72,7 @@ function newCanvas(gridWidth) {
         })
     })
 
-    const sliderLabel = document.getElementById("sliderLabel");
-    sliderLabel.addEventListener("oninput", function () {
-        alert("meow");
-    })
+  
 
 }
 
