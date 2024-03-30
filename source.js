@@ -37,7 +37,6 @@ function newCanvas(gridWidth) {
     canvas.innerHTML = ""; // clears canvas
     let gridSize = gridWidth * gridWidth;
     let squareSize = document.getElementById("canvas").offsetWidth / gridWidth;
-    // console.log(squareSize);
     square.style.width = squareSize + "px";
     square.style.height = squareSize + "px";
 
@@ -60,7 +59,6 @@ function newCanvas(gridWidth) {
 
         elem.addEventListener("click", function () {
             let style = getComputedStyle(elem);
-            // console.log(style["background-color"]);
             brushColor = style["background-color"];
         })
 
