@@ -1,2 +1,2 @@
 Live Preview: 
-liampc01.github.io/Etch-a-Sketch
+https://liampc01.github.io/Etch-a-Sketch/
